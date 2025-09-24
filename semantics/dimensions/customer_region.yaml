@@ -1,0 +1,6 @@
+name: customer_region
+definition: "geo_region"
+hierarchy:
+  - country
+  - state
+  - city

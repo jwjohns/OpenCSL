@@ -1,0 +1,6 @@
+name: active_users
+definition: "COUNT(DISTINCT user_id)"
+filters:
+  - "status = 'active'"
+owner: analytics-team
+tags: [user, engagement]

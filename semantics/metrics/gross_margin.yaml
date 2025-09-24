@@ -1,0 +1,5 @@
+name: gross_margin_pct
+definition: "SAFE_DIVIDE(SUM(revenue) - SUM(cost_of_goods_sold), NULLIF(SUM(revenue),0))"
+filters: []
+owner: finance-analytics
+tags: [finance, margin]

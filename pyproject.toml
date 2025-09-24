@@ -1,0 +1,47 @@
+[project]
+name = "customer-semantic-layer"
+version = "0.1.0"
+description = "Enterprise-owned semantic control plane that prevents vendor lock-in"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "CSL Community"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic>=2.0",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "isort",
+    "flake8",
+]
+
+[project.urls]
+Homepage = "https://github.com/csl-community/customer-semantic-layer"
+Repository = "https://github.com/csl-community/customer-semantic-layer"
+Issues = "https://github.com/csl-community/customer-semantic-layer/issues"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3

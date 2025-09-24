@@ -1,0 +1,1 @@
+# Vendor adapters for Customer Semantic Layer
