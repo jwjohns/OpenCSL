@@ -1,5 +1,10 @@
 # Customer Semantic Layer (CSL)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)](https://fastapi.tiangolo.com)
+[![uv](https://img.shields.io/badge/package%20manager-uv-blue)](https://github.com/astral-sh/uv)
+
 **Take back control of your data semantics. Vendors don't dictate our specs.**
 
 An open source, enterprise-owned semantic control plane that prevents vendor lock-in from data companies like Snowflake, Tableau, and BlackRock.
