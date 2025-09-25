@@ -92,6 +92,37 @@ python registry/adapters/tableau.py \
   --server your-snowflake.com \
   --database PROD \
   --outfile active_users.tds
+
+# Generate PowerBI Dataset
+python registry/adapters/powerbi.py \
+  --metric active_users \
+  --table users \
+  --server your-snowflake.com \
+  --database PROD \
+  --schema PUBLIC \
+  --warehouse WH \
+  --outfile active_users_dataset.json
+
+# Generate Looker LookML
+python registry/adapters/looker.py \
+  --metric active_users \
+  --table users \
+  --outdir looker_output
+
+# Generate dbt Models
+python registry/adapters/dbt.py \
+  --metric active_users \
+  --table users \
+  --outdir dbt_output
+
+# Generate Superset Configs
+python registry/adapters/superset.py \
+  --metric active_users \
+  --table users \
+  --server your-snowflake.com \
+  --database PROD \
+  --schema PUBLIC \
+  --outdir superset_output
 ```
 
 ### API Access
@@ -139,11 +170,11 @@ CSL is governed by the community to prevent vendor capture:
 ### Phase 1: Foundation (Complete)
 - [x] Core semantic schema (metrics, dimensions, entities)
 - [x] Registry API service
-- [x] Basic vendor adapters (Snowflake, Tableau)
+- [x] Major vendor adapters (Snowflake, Tableau, PowerBI, Looker, dbt, Superset)
 
 ### Phase 2: Production Ready
 - [ ] Governance workflows (approval, audit)
-- [ ] More vendor adapters (PowerBI, Looker, dbt)
+- [ ] Additional vendor adapters (Databricks, QuickSight, Grafana)
 - [ ] Performance optimization and caching
 - [ ] Authentication and authorization
 
