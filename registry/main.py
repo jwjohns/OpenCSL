@@ -1,8 +1,16 @@
 from fastapi import FastAPI, HTTPException
 from .models import Metric, Dimension
 from .utils import load_semantics
+from .governance_api import governance_router
 
-app = FastAPI(title="Customer Semantic Layer", version="0.1.0")
+app = FastAPI(
+    title="Customer Semantic Layer",
+    version="0.2.0",
+    description="Enterprise-owned semantic control plane that prevents vendor lock-in"
+)
+
+# Include governance API endpoints
+app.include_router(governance_router)
 
 # Load all semantic definitions on startup
 semantics = load_semantics()
